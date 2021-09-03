@@ -38,18 +38,18 @@ use app\Router;
                     <a class="nav-link p-2" href="<?= Router::INDEX_ROUTE?>"
                        >Home</a>
                 </li>
+                <?php if(!isset($_SESSION['id'])): ?>
                 <li class="nav-item col-6 col-md-auto">
                     <a class="nav-link p-2" href="<?= Router::INDEX_ROUTE.Router::$routeNames['sign-up']?>">sign-up</a>
                 </li>
                 <li class="nav-item col-6 col-md-auto">
                     <a class="nav-link p-2 active" aria-current="true"
-                       href="<?= Router::INDEX_ROUTE.Router::$routeNames['login']?>">login</a>
+                       href="<?= Router::INDEX_ROUTE.Router::$routeNames['login.create']?>">login</a>
                 </li>
-
+                <?php endif; ?>
             </ul>
 
             <hr class="d-md-none text-white-50">
-
             <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
                 <li class="nav-item col-6 col-md-auto">
                     <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
@@ -99,9 +99,14 @@ use app\Router;
                     </a>
                 </li>
             </ul>
+            <?php if(isset($_SESSION['id'])): ?>
+                <h3 class="text-md text-white pb-1.5"><?=$_SESSION['username'] ?></h3>
+                <form method="POST" action="<?=Router::INDEX_ROUTE.Router::$routeNames['users.logout']?>">
+                <button class="btn btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3 pb-2"
+                   type="submit" name="userLogoutForm">logout</button>
+                </form>
+            <?php endif; ?>
 
-            <a class="btn btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3"
-               href="https://getbootstrap.com/docs/5.1/getting-started/download/">Download</a>
         </div>
     </nav>
 </header>

@@ -6,7 +6,7 @@ ob_start();
 ?>
     <main class="form-signin">
         <div class="my-10">
-            <form action="<?=Router::INDEX_ROUTE.Router::$routeNames['login']?>" method="POST">
+            <form action="<?=Router::INDEX_ROUTE.Router::$routeNames['login.verify']?>" method="POST">
 
                 <img class="mx-auto" src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt=""
                      width="72" height="57">

@@ -33,9 +33,9 @@ class User
                 else{
 
                     session_regenerate_id();
-                    $_SESSION['id'] = $data[0]['id'];
-                    $_SESSION['username'] = $data[0]['username'];
-                    $_SESSION['email'] = $data[0]['email'];
+                    $_SESSION['id'] = $data['id'];
+                    $_SESSION['username'] = $data['username'];
+                    $_SESSION['email'] = $data['email'];
                     $_SESSION['message'] = 'login was successful';
                 }
             }

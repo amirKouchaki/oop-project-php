@@ -1,6 +1,7 @@
 <?php
 
 namespace app\controllers;
+use app\middlewares\AuthMiddleware;
 use app\Router;
 use app\models\User;
 
@@ -23,4 +24,9 @@ class UserRegistrationController extends Controller
         //redirect
         header('Location: '.Router::INDEX_ROUTE.Router::$routeNames['index'].'?message=success');
     }
+    public static function create(){
+        AuthMiddleware::handle();
+        Controller::renderview('sign-up.php');
+    }
+
 }
