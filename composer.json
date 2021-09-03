@@ -1,0 +1,23 @@
+{
+    "name": "msi/oop-project-php",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "amir kouchaki",
+            "email": "amirkouchaki1@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^5.3",
+        "phpunit/phpunit": "^9.5"
+    },
+  "require": {
+    "ext-pdo": "*",
+        "guzzlehttp/guzzle": "^7.3",
+    "ext-json": "*"
+  }
+}
