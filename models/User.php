@@ -44,7 +44,7 @@ class User
             $errors['db'] = 'database problem occurred';
 
         }
-        $_SESSION['errors'] = $errors;
+        $_SESSION['l-errors'] = $errors;
     }
 
     public function save():void

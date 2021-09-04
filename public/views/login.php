@@ -35,7 +35,7 @@ ob_start();
                              <h3 class="text-xs text-red-500 mt-3"><?=$error?></h3>
                          </div>
                         <?php endforeach;
-                        unset($_SESSION['errors'])?>
+                        unset($_SESSION['l-errors'])?>
 
                         <button class="w-100 btn btn-lg btn-primary mt-3" type="submit" name="userLoginForm">Sign in</button>
                         <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
